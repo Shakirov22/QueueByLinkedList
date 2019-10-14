@@ -12,7 +12,7 @@ public class QueueByLinkedList implements java.util.Queue {
     }
 
     public ArrayList<Object> getFromQueue() {
-        ArrayList<Object> output =  new ArrayList<Object>();
+        ArrayList<Object> output = new ArrayList<Object>();
         while (!this.isEmpty()) {
             output.add(this.poll());
         }

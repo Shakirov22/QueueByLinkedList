@@ -1,11 +1,10 @@
 package edu.QueueByLinkedList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class QueueByLinkedListTester {
 
@@ -24,7 +23,7 @@ public class QueueByLinkedListTester {
         queue.addToQueue(input);
 
         Object output[] = queue.getFromQueue().toArray();
-        assertEquals(true, queue.isEmpty());
+        assertTrue(queue.isEmpty());
 
         equalsArray(input, output);
     }
@@ -37,7 +36,7 @@ public class QueueByLinkedListTester {
         queue.addToQueue(input);
 
         Object output[] = queue.getFromQueue().toArray();
-        assertEquals(true, queue.isEmpty());
+        assertTrue(queue.isEmpty());
 
         equalsArray(input, output);
     }
@@ -50,7 +49,7 @@ public class QueueByLinkedListTester {
         queue.addToQueue(input);
 
         Object output[] = queue.getFromQueue().toArray();
-        assertEquals(true, queue.isEmpty());
+        assertTrue(queue.isEmpty());
 
         equalsArray(input, output);
     }

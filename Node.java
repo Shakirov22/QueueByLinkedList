@@ -1,7 +1,7 @@
 package edu.QueueByLinkedList;
 
 public class Node {
-    public Object object;
+    private Object object;
     private Node leftNode;
     private Node rightNode;
 

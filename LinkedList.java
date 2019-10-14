@@ -4,7 +4,7 @@ import java.util.*;
 
 public class LinkedList implements java.util.List {
     private int length;
-    public Node nullNode;
+    private Node nullNode;
     private Node lastNode;
 
     public void addToLinkedList(Object[] input) {
@@ -14,25 +14,23 @@ public class LinkedList implements java.util.List {
     }
 
     public ArrayList<Object> getFromLinkedList() {
-        ArrayList<Object> output =  new ArrayList<Object>();
+        ArrayList<Object> output = new ArrayList<Object>();
         while (!this.isEmpty()) {
             output.add(this.remove(0));
-
-            int ind = 1;
         }
         return output;
     }
 
     LinkedList() {
         this.length = 0;
-        this.nullNode = new Node(null, null,null);
+        this.nullNode = new Node(null);
         this.nullNode.setLeftNode(this.nullNode);
         this.lastNode = null;
     }
 
     LinkedList(Object[] input) {
         this.length = 0;
-        this.nullNode = new Node(null, null,null);
+        this.nullNode = new Node(null);
         this.nullNode.setLeftNode(this.nullNode);
         this.lastNode = null;
         this.addToLinkedList(input);
