@@ -2,8 +2,8 @@ package edu.QueueByLinkedList;
 
 import java.util.*;
 
-public class QueueByLinkedList implements java.util.List, java.util.Queue {
-    private LinkedList<Object> queue;
+public class QueueByLinkedList implements java.util.Queue {
+    private LinkedList queue;
 
     public void addToQueue(Object[] input) {
         for (Object o : input) {
@@ -13,39 +13,14 @@ public class QueueByLinkedList implements java.util.List, java.util.Queue {
 
     public ArrayList<Object> getFromQueue() {
         ArrayList<Object> output =  new ArrayList<Object>();
-        while (!queue.isEmpty()) {
+        while (!this.isEmpty()) {
             output.add(this.poll());
         }
         return output;
     }
 
     QueueByLinkedList() {
-        queue = new LinkedList<>();
-    }
-
-    @Override
-    public Object remove(int index) {
-        return this.queue.remove(index);
-    }
-
-    @Override
-    public boolean contains(Object o) {
-        return this.queue.contains(o);
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return this.queue.isEmpty();
-    }
-
-    @Override
-    public Object get(int index) {
-        return this.queue.get(index);
-    }
-
-    @Override
-    public void add(int index, Object element) {
-        this.queue.add(index, element);
+        queue = new LinkedList();
     }
 
     @Override
@@ -69,7 +44,7 @@ public class QueueByLinkedList implements java.util.List, java.util.Queue {
         if (this.isEmpty()) {
             throw new NoSuchElementException();
         }
-        return this.remove(0);
+        return this.queue.remove(0);
     }
 
     @Override
@@ -86,7 +61,7 @@ public class QueueByLinkedList implements java.util.List, java.util.Queue {
         if (this.isEmpty()) {
             throw new NoSuchElementException();
         }
-        return this.get(0);
+        return this.queue.get(0);
     }
 
     @Override
@@ -100,7 +75,17 @@ public class QueueByLinkedList implements java.util.List, java.util.Queue {
 
     @Override
     public int size() {
-        throw new java.lang.UnsupportedOperationException();
+        return this.size();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return this.queue.isEmpty();
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        return this.queue.contains(o);
     }
 
     @Override
@@ -124,43 +109,7 @@ public class QueueByLinkedList implements java.util.List, java.util.Queue {
     }
 
     @Override
-    public boolean addAll(int index, Collection c) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public void clear() {
-        throw new java.lang.UnsupportedOperationException();
-
-    }
-
-    @Override
-    public Object set(int index, Object element) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
-    public int indexOf(Object o) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
-    public int lastIndexOf(Object o) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
-    public ListIterator listIterator() {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
-    public ListIterator listIterator(int index) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
-    public List subList(int fromIndex, int toIndex) {
         throw new java.lang.UnsupportedOperationException();
     }
 
